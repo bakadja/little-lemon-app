@@ -9,8 +9,8 @@ function App() {
   return (
     <AppContainer>
       <Nav />
-      <Header />
-      <Main />
+      {/* <Header />
+      <Main /> */}
       <Footer />
     </AppContainer>
   );

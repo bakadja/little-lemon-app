@@ -1,10 +1,16 @@
 import styled from "styled-components";
-import {containerMixin, logoMixin, navListMixin, titleMixin} from './mixins'
+import {appMixin,containerMixin, logoMixin, navListMixin, titleMixin, footerMixin, navLinkMixin} from './mixins'
+
 // App styling
+// export const AppContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   gap: 20px;
+// `;
+
+
 export const AppContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 20px;
+  ${appMixin}
 `;
 
 // Nav-bar styling
@@ -45,6 +51,7 @@ export const AppContainer = styled.div`
 
 export const Container = styled.div`
   ${containerMixin}
+  ${props => props.as === "footer" && footerMixin}
 `;
 
 export const Logo = styled.img`
@@ -60,18 +67,21 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li``;
 
-export const NavLink = styled.a`
-  text-decoration: none;
-  font-family: "karla", sans-serif;
-  font-size: 1.2rem;
-  color: #333333;
-  font-weight: medium;
-  &:hover {
-    color: #ee9272;
-    text-decoration: underline;
-  }
-`;
+// export const NavLink = styled.a`
+//   text-decoration: none;
+//   font-family: "karla", sans-serif;
+//   font-size: 1.2rem;
+//   color: #333333;
+//   font-weight: medium;
+//   &:hover {
+//     color: #ee9272;
+//     text-decoration: underline;
+//   }
+// `;
 
+export const NavLink = styled.a`
+  ${navLinkMixin}
+`;
 
 export const Title = styled.h1`
   ${titleMixin}

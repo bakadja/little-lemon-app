@@ -31,9 +31,16 @@ export const containerMixin = css`
   display: grid;
   grid-template-columns: minmax(80px, 1fr) 3fr;
 
+  align-content: center;
+  align-items: center;
+
   ${media.tablet`
     grid-column: 1 / span 8;
   `}
+
+    ${media.phone`
+    grid-column: 1 / span 4;
+    `}
 `;
 
 
@@ -44,17 +51,16 @@ export const headerMixin = css`
 
 export const logoMixin = css`
   width: 150px;
-    //width: 100%; 
   object-fit: contain;
   height: auto;
-  display: flex;
-  align-self: center;
-
+ 
     ${media.tablet`
     width: 100px;
+
     `}
     ${media.phone`
     width: 80px;
+   
     `}
   `;
 
@@ -63,12 +69,12 @@ export const navListMixin = css`
   justify-content: space-between;
 
     ${media.tablet`
-    padding: 0;
+    padding: 0 5px;
     margin: 0;
     `}
 
     ${media.phone`
-    padding: 0;
+    padding: 0 3px;
     `}
 `;
 
@@ -112,5 +118,6 @@ export const titleMixin = css`
 `;
 
   export const footerMixin = css`
-      grid-row: 5 / span 1;
+    grid-row: 5 / span 1;
+    //align-items: center;
   `;

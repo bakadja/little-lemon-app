@@ -1,31 +1,28 @@
 import React from 'react'
-import LogoImage from '../images/Logo.png'
-import {Container, Logo, NavList, NavItem, NavLink} from   '../styles/components.styles'
+import { ReactComponent as Logo } from '../images/Logo.svg';
+import { Container } from '../styles/components.styles';
 
 export default function Nav() {
-return (
+  return (
     <Container as="nav">
-        <Logo src={LogoImage} alt="Logo"/>
-        <NavList>
-            <NavItem>
-                <NavLink href="#home">Home</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#about">About</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#menu">Menu</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#reservations">Reservations</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#order-online">Order Online</NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink href="#login">Login</NavLink>
-            </NavItem>
-        </NavList>
+      <Logo />
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#reservation">Reservation</a>
+        </li>
+        <li>
+          <a href="#order-online">Order Online</a>
+        </li>
+        <li>
+          <a href="#login">Login</a>
+        </li>
+      </ul>
     </Container>
-);
+  );
 }

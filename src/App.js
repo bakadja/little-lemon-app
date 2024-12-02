@@ -1,19 +1,13 @@
+import React from 'react'
+import Nav from "./components/Nav";
 import './App.css';
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import { AppContainer } from './styles/components.styles';
+import { RootLayout } from './styles/components.styles';
 
-function App() {
+
+export default function App() {
   return (
-    <AppContainer>
+    <RootLayout>
       <Nav />
-      {/* <Header />
-      <Main /> */}
-      <Footer />
-    </AppContainer>
-  );
+    </RootLayout>
+  )
 }
-
-export default App;

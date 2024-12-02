@@ -1,123 +1,93 @@
-import { css } from 'styled-components';
-import { media } from './media';
+import { css } from "styled-components";
+import { media } from "./media";
 
+export const layoutMixin = css`
+background-color: white;
+max-width: 1440px;
+margin: 5% auto;
+width: 100%;
+display: grid;
+grid-template-columns: repeat(12,1fr);
+grid-auto-rows: minmax(min-content, auto);
+gap: 1rem;
 
-export  const appMixin = css`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 85px repeat(3, auto) 276px;
-  grid-auto-rows: minmax(min-content, auto);
-  gap: 20px;
-  height: 100vh;
-  /* margin: 0 70px; */
-  margin: 5% auto;
+${media.tablet`
+grid-template-columns: repeat(8,1fr);
+gap: 0.5rem;
 
-  ${media.tablet`
-    /* margin: 0 40px; */
-    margin: 5% auto;
-    grid-template-columns: repeat(8, 1fr);
-  `}
+`}
 
-    ${media.phone`
-    /* margin: 0 20px; */
-    margin: 5% auto;
-    grid-template-columns: repeat(4, 1fr);
-    `}
+${media.mobile`
+grid-template-columns: repeat(4,1fr);
+gap: 0.5rem;
+`}
 `;
 
+export const gridItemMixin = css`
+    grid-column: ${props => {
+        if (props.as === 'nav') {
+            return '3 / 11;';
+        }
+    }};
 
-export const containerMixin = css`
-  grid-column: 3 / span 8;
-  display: grid;
-  grid-template-columns: minmax(80px, 1fr) 3fr;
-
-  align-content: center;
-  align-items: center;
-
-  ${media.tablet`
-    grid-column: 1 / span 8;
-  `}
-
-    ${media.phone`
-    grid-column: 1 / span 4;
-    `}
-`;
-
-
-
-export const headerMixin = css`
-    grid-row: 1 / span 1;
-`;
-
-export const logoMixin = css`
-  width: 150px;
-  object-fit: contain;
-  height: auto;
- 
     ${media.tablet`
-    width: 100px;
-
+        grid-column: ${props => {
+            if (props.as === 'nav') {
+                return '2 / 8;';
+            }
+        }};
     `}
-    ${media.phone`
-    width: 80px;
-   
-    `}
-  `;
 
-export const navListMixin = css`
+    ${media.mobile`
+    margin: 0 1rem;
+        grid-column: ${props => {
+            if (props.as === 'nav') {
+                return 'span 4;';
+            }
+        }};
+    `}
+`;
+
+export const navMixin = css`
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
   justify-content: space-between;
 
-    ${media.tablet`
-    padding: 0 5px;
-    margin: 0;
-    `}
+  a {
+    // font
+    font-family: "Karla", sans-serif;
+    font-size: clamp(14px, calc(0.875rem + 0.1vw), 18pt);
+    font-weight: bold;
+    font-style: normal;
 
-    ${media.phone`
-    padding: 0 3px;
-    `}
-`;
+    // text
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: normal;
 
-
-export const navLinkMixin = css`
-  font-size: 1.2rem;
-  font-weight: medium;
-  color: #333333;
-  font-family: karla, sans-serif;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #f2f2f2;
-    text-decoration: underline;
+    // other
+    color: #495e57;
+    &:hover {
+      color: #3a4b47;
+      text-decoration: underline;
+    }
   }
 
-    ${media.tablet`
-        font-size: 1rem;
-    `}
+  svg {
+    @media (max-width: 545px) {
+      margin-bottom: 1rem;
+    }
+  }
 
-    ${media.phone`
-        font-size: 0.7rem;
-    `}
-`;
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 
-export const titleMixin = css`
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: #333333;
-  font-family: karla, sans-serif;
-
-    ${media.tablet`
-    font-size: 1rem;
-    `}
-
-    ${media.phone`
-    font-size: 0.7rem;
+  ${media.desktopMax`
+        a {
+            font-size: 1.5rem;
+        }
     `}
 `;
-
-  export const footerMixin = css`
-    grid-row: 5 / span 1;
-    //align-items: center;
-  `;

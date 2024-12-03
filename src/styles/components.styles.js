@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import { media } from "./media";
-import { layoutMixin, gridItemMixin, navMixin, heroSectionMixin, heroImageMixin, titleMixin, heroDescriptionMixin, buttonMixin } from "./mixins";
+import { layoutMixin, gridItemMixin, navMixin, heroSectionMixin, imageMixin, titleMixin, heroDescriptionMixin, buttonMixin } from "./mixins";
 
 export const RootLayout = styled.div`
 ${layoutMixin}
@@ -17,8 +17,8 @@ export const Section = styled.section`
 ${props => props.id === 'home' && heroSectionMixin}
 `;
 
-export const HeroImage = styled.img`
-${heroImageMixin}
+export const Image = styled.img`
+${imageMixin}
 `;
 
 export const Title = styled.h1`
@@ -31,3 +31,5 @@ ${heroDescriptionMixin}
 
 export const Button = styled.button`
 ${buttonMixin}`;
+
+export const Card = styled.div``;

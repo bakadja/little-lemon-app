@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Section, HeroImage, Title, Description, Button } from '../styles/components.styles';
-import heroImage from '../images/restaurantfood.jpg';
+import { Container, Section, Image, Title, Description, Button } from '../styles/components.styles';
+import heroImage from '../images/restaurantfood.png';
 
 export default function Header() {
   return (
@@ -15,7 +15,7 @@ export default function Header() {
           </Description>
           <Button>Reserve a Table</Button>
         </div>
-        <HeroImage src={heroImage} alt="restaurant food"/>
+        <Image src={heroImage} alt="restaurant food" />
         <div></div>
       </Section>
     </Container>

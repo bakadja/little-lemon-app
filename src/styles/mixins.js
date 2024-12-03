@@ -141,10 +141,11 @@ export const heroSectionMixin = css`
   }
 `;
 
-  export const heroImageMixin = css`
+  export const imageMixin = css`
     width: 100%;
     height: auto;
-    max-width: 374px;
+    /* max-width: 374px; */
+    max-width: ${(props) => (props.maxWidth ? props.maxWidth : "374px")};
     margin: 0 auto;
 
     ${media.tablet`

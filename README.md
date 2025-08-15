@@ -1,70 +1,170 @@
-# Getting Started with Create React App
+# 🍋 Little Lemon Restaurant App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React Version](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![Styled Components](https://img.shields.io/badge/Styled%20Components-6.1.13-purple.svg)](https://styled-components.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-## Available Scripts
+A modern React application for Little Lemon, a family-owned Mediterranean restaurant. Designed to provide a seamless experience for viewing menus, making reservations, and ordering online.
 
-In the project directory, you can run:
+![Little Lemon App Screenshot](./src/images/app-screenshot.png)
 
-### `npm start`
+## 📑 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Features](#-features)
+- [Demo](#-demo)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the App](#running-the-app)
+  - [Testing](#testing)
+- [Project Structure](#-project-structure)
+- [Styling System](#-styling-system)
+- [Responsive Design](#-responsive-design)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- **Responsive Design**: Seamlessly adapts to desktop, tablet, and mobile views
+- **Modern UI**: Polished interface using styled-components with a consistent design system
+- **Menu Display**: Browse weekly specials and menu items
+- **Online Ordering**: Order food for delivery with a simple interface
+- **Reservation System**: Reserve tables online
+- **Accessibility**: WCAG compliant for inclusive user experience
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎬 Demo
 
-### `npm run build`
+Check out our live demo at [littlelemon.example.com](https://)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend Framework**: React 18
+- **Styling**: Styled Components
+- **Icons**: FontAwesome
+- **Testing**: Jest, React Testing Library
+- **Build Tools**: Create React App
+- **Package Manager**: npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js (>= 16.x)
+- npm (>= 8.x)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/bakadja/little-lemon-app.git
+cd little-lemon-app
+```
 
-## Learn More
+2. Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Running the App
 
-### Code Splitting
+Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+This will launch the app at [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Building for Production
 
-### Making a Progressive Web App
+Create an optimized production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm run build
+```
 
-### Advanced Configuration
+### Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Run the test suite:
 
-### Deployment
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📁 Project Structure
 
-### `npm run build` fails to minify
+```
+little-lemon-app/
+├── public/                 # Static files
+├── src/
+│   ├── components/         # React components
+│   ├── images/             # Images and assets
+│   ├── styles/             # Styled components and styling system
+│   │   ├── components.styles.js
+│   │   ├── media.js        # Media queries for responsive design
+│   │   └── mixins.js       # Reusable style mixins
+│   ├── App.js              # Main application component
+│   └── index.js            # Application entry point
+├── .gitignore              # Git ignored files
+└── package.json            # Project dependencies and scripts
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🎨 Styling System
+
+The project uses a comprehensive styling system built with styled-components:
+
+- **Media Queries**: Responsive breakpoints for mobile, tablet, and desktop
+- **Grid System**: 12-column grid for layout design
+- **Mixins**: Reusable styling patterns for consistent UI
+- **Typography**: Carefully selected font families (Karla and Markazi Text)
+- **Color Palette**: Mediterranean-inspired color scheme
+
+### Core Colors
+
+```css
+/* Primary Colors */
+--primary-green: #495e57;
+--primary-yellow: #f4ce14;
+
+/* Secondary Colors */
+--secondary-salmon: #ee9972;
+--secondary-peach: #fbdabb;
+
+/* Neutral Colors */
+--highlight-white: #edefee;
+--highlight-black: #333333;
+```
+
+## 📱 Responsive Design
+
+The application is fully responsive with tailored experiences for:
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1025px
+
+Each component adapts its layout and styling based on the viewport size.
+
+## 👥 Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+## 📞 Contact
+
+- **Project Maintainer**: [Your Name](https://github.com/yourusername)
+- **Website**: [yourdomain.com](https://yourdomain.com)
+- **Email**: your.email@example.com
+- **Twitter**: [@yourhandle](https://twitter.com/yourhandle)
+
+---
+
+Made with ❤️ by the Little Lemon Team

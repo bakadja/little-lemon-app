@@ -117,7 +117,7 @@ test: add tests for reservation component
 
 ## Community
 
-- Join our [Discord server](https://discord.gg/example) for discussions
+- Join our [Discord server "DevProjects Hub"](https://discord.gg/VCqFE4wF) for discussions about this and other projects
 
 - Follow us on [Twitter](https://twitter.com/example)
 

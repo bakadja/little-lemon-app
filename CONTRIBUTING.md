@@ -119,7 +119,7 @@ test: add tests for reservation component
 
 - Join our [Discord server "DevProjects Hub"](https://discord.gg/VCqFE4wF) for discussions about this and other projects
 
-- Follow us on [Twitter](https://twitter.com/example)
+- Connect with us on [GitHub Discussions](https://github.com/bakadja/little-lemon-app/discussions) for project updates and community interaction
 
 ---
 
